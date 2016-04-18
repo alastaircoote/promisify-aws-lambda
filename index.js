@@ -12,6 +12,7 @@ module.exports = function(func, event) {
                 fulfill(response);
             }
         };
-        func(event, context);
+
+        func(event, context, context.done);
     })
 }
